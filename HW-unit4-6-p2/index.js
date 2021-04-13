@@ -82,48 +82,83 @@ Canada.displayRegion();
 //Array vs Objects
 
 //Objects: Create a hobby object with properties with name, descriptions and boolean of a property name of supplies needed.
-
+let hobby = {
+    name: "wake boarding",
+    description: "a water sport where you surf on water with a board, pulled by a boat",
+    suppliesNeeded: true
+}
 //Use dot notation to return hobby description
+console.log(hobby.description);
 
 //Use bracket notation to return name
+console.log(hobby["name"]);
 
 
 //Arrays: Create an array with 4 different hobbies
-
+let hobbies = ["wake boarding", "skateboarding", "ultimate frisbee", "overwatch"];
 
 //access second item in the array
+console.log(hobbies[1]);
 
 //Objects
 //Change the value of the boolean of the object we created.
+hobby.suppliesNeeded = false;
+console.log(hobby);
 
-//Add a new property to our person object such as supplies with multiple values in the property.
+//Add a new property to our hobbies object such as supplies with multiple values in the property.
+hobby.supplies = ["board", "boat", "wetsuit", "goggles"];
+console.log(hobby);
 
 //remove the hobby description property from the person object
+delete hobby.supplies;
+console.log(hobby)
 
 
 //Arrays
 //Use push to add another hobby to your array of hobbies
+hobbies.push("gardening");
+console.log(hobbies)
 
 
 //use pop to remove the last item from an hobby array
+hobbies.pop();
+console.log(hobbies)
 
 
 //use unshift to add more values to the beginning of the hobby array.
+hobbies.unshift("gardening");
+console.log(hobbies)
 
 // us shift to remove the item from the hobby of the array
+hobbies.shift();
+console.log(hobbies)
 
 //Object
 //Write a for in loop for the person object you created
+for (let key in profile1) {
+    console.log(key);
+    console.log(profile1[key])
+}
 
 //Write a for each loop for your person Object
-
+Object.keys(profile1).forEach(function(key) {
+    console.log(key);
+    console.log(profile1[key]);
+})
 
 //Arrays
 //Write a for loop for your hobby array
+for (let i = 0; i < hobbies.length; i++) {
+    console.log(hobbies[i])
+}
 
 //Write a for of loop for your hobby array
+for (let item of hobbies) {
+    console.log(item);
+}
 
 //write a for each loop for your hobby array
+hobbies.forEach(element => console.log(element));
 
 
 
